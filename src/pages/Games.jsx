@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../components/Loading';
 import getMatchs from '../helpers/getMatchs';
 
 const Games = () => {
   const [partidos, setPartidos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getInfo = async () => {
     const matches = await getMatchs();
     setPartidos(matches);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -15,6 +18,7 @@ const Games = () => {
   return (
     <>
       <ul className='flex flex-row flex-wrap justify-center gap-2 p-6'>
+        {isLoading && <Loading />}
         {partidos
           .map((partido, index, array) => (
             <div

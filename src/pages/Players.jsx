@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import Loading from '../components/Loading';
 import getPlayers from '../helpers/getPlayers';
 
 const Players = () => {
   const [players, setPlayers] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getInfo = async () => {
     const jugadores = await getPlayers();
     setPlayers(jugadores);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -15,6 +18,7 @@ const Players = () => {
 
   return (
     <div className='m-auto flex max-w-4xl flex-row flex-wrap items-center justify-center gap-2 p-6'>
+      {isLoading && <Loading />}
       {players.map(({ jugador, promedio, partidos }) => (
         <div
           key={jugador}
