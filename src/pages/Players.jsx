@@ -22,11 +22,11 @@ const Players = () => {
       {players.map(({ jugador, promedio, partidos }) => (
         <div
           key={jugador}
-          className='w-full rounded-lg border bg-neutral-100 p-4 sm:w-60'
+          className='w-full rounded-lg border bg-neutral-100 p-4 sm:w-60 dark:bg-gray-700 dark:border-gray-600'
         >
-          <h2 className='text-md text-center font-bold'>{jugador}</h2>
-          <p>Promedio: {promedio}</p>
-          <p>Partidos jugados: {partidos}</p>
+          <h2 className='text-md text-center font-bold text-neural-900 dark:text-white'>{jugador}</h2>
+          <p className='text-neural-900 dark:text-white'>Promedio: {promedio}</p>
+          <p className='text-neural-900 dark:text-white'>Partidos jugados: {partidos}</p>
         </div>
       ))}
     </div>

@@ -23,13 +23,13 @@ const Games = () => {
           .map((partido, index, array) => (
             <div
               key={index}
-              className='w-full rounded-lg border bg-neutral-100 p-4 sm:w-60'
+              className='w-full rounded-lg border bg-neutral-100 p-4 sm:w-60 dark:bg-gray-700 dark:border-gray-600'
             >
-              <h2 className='text-xl'>Fecha: {partido.fecha}</h2>
-              <p>Ganador: {partido.ganador}</p>
-              <p>MVP: {partido.mvp}</p>
-              <p>Goleador: {partido.goleador}</p>
-              <p>Dato de color: {partido.detalle}</p>
+              <h2 className='text-xl text-neural-900 dark:text-white'>Fecha: {partido.fecha}</h2>
+              <p className='text-neural-900 dark:text-white'>Ganador: {partido.ganador}</p>
+              <p className='text-neural-900 dark:text-white'>MVP: {partido.mvp}</p>
+              <p className='text-neural-900 dark:text-white'>Goleador: {partido.goleador}</p>
+              <p className='text-neural-900 dark:text-white'>Dato de color: {partido.detalle}</p>
             </div>
           ))
           .reverse()}
