@@ -9,26 +9,7 @@ import Players from './pages/Players';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App>
-        <Routes>
-          <Route
-            path='/'
-            element={<App />}
-          />
-          <Route
-            path='/partidos'
-            element={<Games />}
-          />
-          <Route
-            path='/jugadores'
-            element={<Players />}
-          />
-          <Route
-            path='/*'
-            element={<Navigate to='/' />}
-          />
-        </Routes>
-      </App>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

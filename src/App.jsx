@@ -30,7 +30,6 @@ function App() {
           element={<Navigate to='/' />}
         />
       </Routes>
-      <Home />
       <Footer />
     </div>
   );
