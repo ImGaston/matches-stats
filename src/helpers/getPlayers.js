@@ -8,7 +8,6 @@ async function getPlayers() {
   const parsed = await new Promise((resolve, reject) => {
     Papa.parse(data, { header: true, complete: resolve, error: reject });
   });
-  console.log(parsed.data);
   return parsed.data;
 }
 

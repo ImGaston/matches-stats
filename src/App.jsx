@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className='dark:bg-gray-800 min-h-screen	'>
+    <div className='min-h-screen dark:bg-gray-800	'>
       <Navbar />
       <Routes>
         <Route
@@ -30,6 +30,7 @@ function App() {
           element={<Navigate to='/' />}
         />
       </Routes>
+      <Home />
       <Footer />
     </div>
   );
